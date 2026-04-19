@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.letter-spacing-2 {
+  letter-spacing: 0.1rem;
+}
+
+a:hover {
+  color: skyblue;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  transition: all 0.4s ease;
+}

@@ -1,0 +1,194 @@
+---
+import LangContainer from "./Lang-Container.astro";
+
+const frontend_skills = [
+  {
+    name: "React",
+    icon: "/skills/frontend/react.svg",
+  },
+  {
+    name: "TypeScript",
+    icon: "/skills/frontend/typescript.svg",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "/skills/frontend/tailwindcss.svg",
+  },
+];
+
+const backend_skills = [
+  {
+    name: "Python",
+    icon: "/skills/backend/python.svg",
+  },
+  {
+    name: "FastAPI",
+    icon: "/skills/backend/fastapi.svg",
+  },
+  { name: "PHP", icon: "/skills/backend/php.svg" },
+  { name: "Laravel", icon: "/skills/backend/laravel.svg" },
+];
+
+const database_skills = [
+  { name: "MySQL", icon: "/skills/database/mysql.svg" },
+  { name: "PostgreSQL", icon: "/skills/database/postgresql.svg" },
+  { name: "Oracle", icon: "/skills/database/oracle.svg" },
+  { name: "SQLite", icon: "/skills/database/sqlite.svg" },
+];
+
+const infra_skills = [
+  { name: "Docker", icon: "/skills/infra/docker.svg" },
+  { name: "Google Cloud", icon: "/skills/infra/googlecloud.svg" },
+];
+
+const desktop_skills = [
+  { name: "C#", icon: "/skills/desktop/Csharp.svg" },
+  { name: "Python", icon: "/skills/backend/python.svg" },
+];
+
+const ai_skills = [
+  { name: "Github Copilot", icon: "/skills/ai/copilot.svg" },
+  { name: "Cursor", icon: "/skills/ai/cursor.svg" },
+  { name: "Antigravity", icon: "/skills/ai/antigravity.png" },
+  { name: "ChatGPT", icon: "/skills/ai/OpenAI.svg" },
+  { name: "Gemini", icon: "/skills/ai/gemini.svg" },
+];
+
+const test_skills = [
+  { name: "PlayWright", icon: "/skills/tests/playwright.svg" },
+  { name: "Jest", icon: "/skills/tests/jest.svg" },
+  { name: "Pytest", icon: "/skills/tests/pytest.svg" },
+];
+
+const projects_skills = [
+  { name: "Redmine", icon: "/skills/projects/redmine.svg" },
+  { name: "backlog", icon: "/skills/projects/backlog.png" },
+];
+
+const etc_skills = [
+  { name: "Java", icon: "/skills/etc/Java.svg" },
+  { name: "Microsoft Access", icon: "/skills/etc/access.svg" },
+  { name: "Astro", icon: "/skills/etc/astro.svg" },
+  { name: "AWS", icon: "/skills/etc/aws.svg" },
+  { name: "Dart", icon: "/skills/etc/dart.svg" },
+  { name: "Django", icon: "/skills/etc/django.svg" },
+  { name: "VBA (Microsoft Excel)", icon: "/skills/etc/excel.svg" },
+  { name: "Flask", icon: "/skills/etc/flask.svg" },
+  { name: "Flutter", icon: "/skills/etc/flutter.svg" },
+  { name: "Google Apps Script", icon: "/skills/etc/gas.svg" },
+  { name: "Git", icon: "/skills/etc/git.svg" },
+  { name: "GitHub", icon: "/skills/etc/github.svg" },
+  { name: "Go", icon: "/skills/etc/go.svg" },
+  { name: "Supabase", icon: "/skills/etc/supabase.svg" },
+  { name: "Unity", icon: "/skills/etc/unity.svg" },
+  { name: "Debian", icon: "/skills/etc/debian.svg" },
+];
+---
+
+<div class="p-4 flex flex-col gap-10">
+  <p class="text-4xl font-bold">Skills</p>
+  <div class="w-screen grid grid-cols-2 pt-10 gap-1">
+    <div class="w-full flex flex-col gap-6 p-4">
+      <p class="text-2xl font-bold border-b border-gray-700 pb-6">
+        フロントエンド
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          frontend_skills.map((skill) => (
+            <LangContainer lang_name={skill.name} icon={skill.icon} />
+          ))
+        }
+      </div>
+    </div>
+    <div class="w-full flex flex-col gap-6 p-4">
+      <p class="text-2xl font-bold border-b border-gray-700 pb-6">
+        バックエンド
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          backend_skills.map((skill) => (
+            <LangContainer lang_name={skill.name} icon={skill.icon} />
+          ))
+        }
+      </div>
+    </div>
+    <div class="w-full flex flex-col gap-6 p-4">
+      <p class="text-2xl font-bold border-b border-gray-700 pb-6">
+        データベース
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          database_skills.map((skill) => (
+            <LangContainer lang_name={skill.name} icon={skill.icon} />
+          ))
+        }
+      </div>
+    </div>
+    <div class="w-full flex flex-col gap-6 p-4">
+      <p class="text-2xl font-bold border-b border-gray-700 pb-6">インフラ</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          infra_skills.map((skill) => (
+            <LangContainer lang_name={skill.name} icon={skill.icon} />
+          ))
+        }
+      </div>
+    </div>
+    <div class="w-full flex flex-col gap-6 p-4">
+      <p class="text-2xl font-bold border-b border-gray-700 pb-6">
+        デスクトップ
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          desktop_skills.map((skill) => (
+            <LangContainer lang_name={skill.name} icon={skill.icon} />
+          ))
+        }
+      </div>
+    </div>
+    <div class="w-full flex flex-col gap-6 p-4">
+      <p class="text-2xl font-bold border-b border-gray-700 pb-6">AI</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          ai_skills.map((skill) => (
+            <LangContainer lang_name={skill.name} icon={skill.icon} />
+          ))
+        }
+      </div>
+    </div>
+    <div class="w-full flex flex-col gap-6 p-4">
+      <p class="text-2xl font-bold border-b border-gray-700 pb-6">テスト</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          test_skills.map((skill) => (
+            <LangContainer lang_name={skill.name} icon={skill.icon} />
+          ))
+        }
+      </div>
+    </div>
+    <div class="w-full flex flex-col gap-6 p-4">
+      <p class="text-2xl font-bold border-b border-gray-700 pb-6">
+        プロジェクト管理
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          projects_skills.map((skill) => (
+            <LangContainer lang_name={skill.name} icon={skill.icon} />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+  <div class="w-full flex flex-col gap-4 p-4">
+    <p class="text-2xl font-bold border-b border-gray-700 pb-6">
+      その他（触ったことがある等）
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pl-20">
+      {
+        etc_skills.map((skill) => (
+          <LangContainer lang_name={skill.name} icon={skill.icon} />
+        ))
+      }
+    </div>
+  </div>
+</div>
