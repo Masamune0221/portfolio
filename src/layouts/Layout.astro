@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import Header from "../components/Header.astro";
+const isProd = import.meta.env.PROD;
 ---
 
 <!doctype html>
@@ -19,16 +19,19 @@ import Header from "../components/Header.astro";
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap" rel="stylesheet">
     <meta name="generator" content={Astro.generator} />
     <title>PortFolio</title>
-  </head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4XLGNDMVL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    { isProd && (
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-M4XLGNDMVL"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    gtag('config', 'G-M4XLGNDMVL');
-  </script>
+      gtag('config', 'G-M4XLGNDMVL');
+    </script>
+    )}
+  </head>
+  
   <body class="bg-white text-black dark:bg-gray-900 dark:text-white">
     <slot />
   </body>
