@@ -1,26 +1,72 @@
 ---
 const capsuleBg = `${import.meta.env.BASE_URL}capsules-bg.svg`;
+const githubIcon = `${import.meta.env.BASE_URL}skills/etc/github.svg`;
 ---
 
-<div class="relative w-full min-h-[70vh] 2xl:min-h-[80vh] overflow-hidden flex items-center justify-center pt-24 pb-16">
-    <!-- 背景画像 (絶対配置でコンテナ全体を覆う) -->
-    <img src={capsuleBg} alt="capsule-bg" class="absolute inset-0 w-full h-full object-cover opacity-90 z-0" />
+<div
+  class="relative w-full min-h-[70vh] 2xl:min-h-[80vh] overflow-hidden flex items-center justify-center pt-24 pb-16"
+>
+  <!-- 背景画像 (絶対配置でコンテナ全体を覆う) -->
+  <img
+    src={capsuleBg}
+    alt="capsule-bg"
+    class="absolute inset-0 w-full h-full object-cover opacity-90 z-0"
+  />
 
-    <!-- コンテンツ部分 -->
-    <div class="relative z-10 w-[92%] max-w-5xl 2xl:max-w-[1600px] flex flex-row items-center justify-between gap-8 2xl:gap-16">
-        
-        <!-- 左側：肩書き・名前 -->
-        <div class="w-[45%] shrink-0">
-            <p class="text-3xl 2xl:text-4xl font-bold border-b-2 border-gray-500 pb-2">Software Engineer</p>
-            <p class="pt-4 text-5xl 2xl:text-7xl font-bold whitespace-nowrap">前田 将宗 </p>
-            <p class="pt-2 text-2xl 2xl:text-3xl"> (Masamune Maeda)</p>
-        </div>
-
-        <!-- 右側：自己紹介文 -->
-        <div class="w-[50%] flex flex-col gap-6 2xl:gap-10 text-base md:text-lg 2xl:text-2xl">
-            <p leading-relaxed>AIを活用したバックエンド・フロントエンドの開発経験があり、品質とスピードを両立させた開発を心がけています。</p>
-            <p leading-relaxed>継続的なスキルアップデートのために、プライベートでも新しい技術や言語に触れることを心がけています。</p>
-            <p leading-relaxed>趣味はゲーム（ApexやValorant,Minecraft）とYouTube鑑賞です。</p>
-        </div>
+  <!-- コンテンツ部分 -->
+  <div
+    class="relative z-0 w-[90%] max-w-5xl 2xl:max-w-[1600px] flex flex-col md:flex-row items-center justify-between gap-12 2xl:gap-16"
+  >
+    <!-- 左側：肩書き・名前 -->
+    <div
+      class="w-full md:w-[45%] shrink-0 text-center md:text-left flex flex-col items-center md:items-start"
+    >
+      <p
+        class="text-2xl md:text-3xl 2xl:text-4xl font-bold border-b-2 border-gray-500 pb-2 inline-block"
+      >
+        Software Engineer
+      </p>
+      <p
+        class="pt-6 text-4xl md:text-5xl 2xl:text-7xl font-bold whitespace-nowrap"
+      >
+        前田 将宗
+      </p>
+      <p class="pt-2 text-xl md:text-2xl 2xl:text-3xl text-gray-400">
+        (Masamune Maeda)
+      </p>
+      <div class="pt-6">
+        <a
+          href="https://github.com/Masamune0221"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full
+                 bg-white/5 border border-white/10 backdrop-blur-sm
+                 hover:bg-white/10 hover:border-sky-500/40 hover:shadow-[0_0_15px_rgba(220,220,68,0.3)]
+                 transition-all duration-300 group"
+        >
+          <img
+            src={githubIcon}
+            alt="GitHub"
+            class="w-6 h-6 group-hover:scale-110 transition-transform"
+          />
+          <span class="text-sm font-medium tracking-wide">GitHub</span>
+        </a>
+      </div>
     </div>
+
+    <!-- 右側：自己紹介文 -->
+    <div
+      class="w-full md:w-[50%] flex flex-col gap-6 2xl:gap-10 text-base md:text-lg 2xl:text-2xl text-gray-300"
+    >
+      <p leading-relaxed>
+        AIを活用したバックエンド・フロントエンドの開発経験があり、品質とスピードを両立させた開発を心がけています。
+      </p>
+      <p leading-relaxed>
+        継続的なスキルアップデートのために、プライベートでも新しい技術や言語に触れることを心がけています。
+      </p>
+      <p leading-relaxed>
+        趣味はゲーム（ApexやValorant,Minecraft）とYouTube鑑賞です。
+      </p>
+    </div>
+  </div>
 </div>

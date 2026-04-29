@@ -85,14 +85,14 @@ const etc_skills = [
 ];
 ---
 
-<div class="p-4 flex flex-col gap-10">
-  <p class="text-4xl font-bold">Skills</p>
-  <div class="w-screen grid grid-cols-2 pt-10 gap-1">
-    <div class="w-full flex flex-col gap-6 p-4">
+<div id="skills" class="p-4 flex flex-col gap-4 m-4">
+  <p class="text-3xl md:text-4xl font-bold">Skills</p>
+  <div class="w-full grid grid-cols-1 md:grid-cols-2 pt-10 gap-8 md:gap-4">
+    <div class="flex flex-col gap-6 p-2 md:p-4">
       <p class="text-2xl font-bold border-b border-gray-700 pb-6">
         フロントエンド
       </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
         {
           frontend_skills.map((skill) => (
             <LangContainer lang_name={skill.name} icon={skill.icon} />
@@ -100,11 +100,11 @@ const etc_skills = [
         }
       </div>
     </div>
-    <div class="w-full flex flex-col gap-6 p-4">
+    <div class="w-full flex flex-col gap-6 p-2 md:p-4">
       <p class="text-2xl font-bold border-b border-gray-700 pb-6">
         バックエンド
       </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
         {
           backend_skills.map((skill) => (
             <LangContainer lang_name={skill.name} icon={skill.icon} />
@@ -112,11 +112,11 @@ const etc_skills = [
         }
       </div>
     </div>
-    <div class="w-full flex flex-col gap-6 p-4">
+    <div class="w-full flex flex-col gap-6 p-2 md:p-4">
       <p class="text-2xl font-bold border-b border-gray-700 pb-6">
         データベース
       </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
         {
           database_skills.map((skill) => (
             <LangContainer lang_name={skill.name} icon={skill.icon} />
@@ -124,9 +124,9 @@ const etc_skills = [
         }
       </div>
     </div>
-    <div class="w-full flex flex-col gap-6 p-4">
+    <div class="w-full flex flex-col gap-6 p-2 md:p-4">
       <p class="text-2xl font-bold border-b border-gray-700 pb-6">インフラ</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
         {
           infra_skills.map((skill) => (
             <LangContainer lang_name={skill.name} icon={skill.icon} />
@@ -134,11 +134,11 @@ const etc_skills = [
         }
       </div>
     </div>
-    <div class="w-full flex flex-col gap-6 p-4">
+    <div class="w-full flex flex-col gap-6 p-2 md:p-4">
       <p class="text-2xl font-bold border-b border-gray-700 pb-6">
         デスクトップ
       </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
         {
           desktop_skills.map((skill) => (
             <LangContainer lang_name={skill.name} icon={skill.icon} />
@@ -146,9 +146,9 @@ const etc_skills = [
         }
       </div>
     </div>
-    <div class="w-full flex flex-col gap-6 p-4">
+    <div class="w-full flex flex-col gap-6 p-2 md:p-4">
       <p class="text-2xl font-bold border-b border-gray-700 pb-6">AI</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
         {
           ai_skills.map((skill) => (
             <LangContainer lang_name={skill.name} icon={skill.icon} />
@@ -156,9 +156,9 @@ const etc_skills = [
         }
       </div>
     </div>
-    <div class="w-full flex flex-col gap-6 p-4">
+    <div class="w-full flex flex-col gap-6 p-2 md:p-4">
       <p class="text-2xl font-bold border-b border-gray-700 pb-6">テスト</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
         {
           test_skills.map((skill) => (
             <LangContainer lang_name={skill.name} icon={skill.icon} />
@@ -166,11 +166,11 @@ const etc_skills = [
         }
       </div>
     </div>
-    <div class="w-full flex flex-col gap-6 p-4">
+    <div class="w-full flex flex-col gap-6 p-2 md:p-4">
       <p class="text-2xl font-bold border-b border-gray-700 pb-6">
         プロジェクト管理
       </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
         {
           projects_skills.map((skill) => (
             <LangContainer lang_name={skill.name} icon={skill.icon} />
@@ -179,11 +179,13 @@ const etc_skills = [
       </div>
     </div>
   </div>
-  <div class="w-full flex flex-col gap-4 p-4">
+  <div class="w-full flex flex-col gap-4 p-2 md:p-4">
     <p class="text-2xl font-bold border-b border-gray-700 pb-6">
       その他（触ったことがある等）
     </p>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pl-20">
+    <div
+      class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 md:px-10"
+    >
       {
         etc_skills.map((skill) => (
           <LangContainer lang_name={skill.name} icon={skill.icon} />

@@ -1,0 +1,42 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="w-full py-12 mt-20 relative overflow-hidden">
+  <div
+    class="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-red-900/40 to-transparent"
+  >
+  </div>
+
+  <div
+    class="max-w-5xl 2xl:max-w-[1600px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8"
+  >
+    <div class="flex flex-col items-center md:items-start">
+      <p
+        class="font-bold text-2xl tracking-tight bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent"
+      >
+        Portfolio
+      </p>
+      <p class="text-gray-500 text-sm mt-2">
+        {currentYear} 前田 将宗 (Masamune Maeda)
+      </p>
+    </div>
+    <nav class="flex gap-8 text-sm font-medium">
+      <a
+        href="#"
+        class="text-gray-400 hover:text-red-400 transition-colors duration-300"
+        >Top</a
+      >
+      <a
+        href="#skills"
+        class="text-gray-400 hover:text-red-400 transition-colors duration-300"
+        >Skills</a
+      >
+      <a
+        href="#works"
+        class="text-gray-400 hover:text-red-400 transition-colors duration-300"
+        >Works</a
+      >
+    </nav>
+  </div>
+</footer>

@@ -1,0 +1,72 @@
+---
+import CompanyName from "./Company-Name.astro";
+import ProjectDetail from "./Project-Detail.astro";
+---
+
+<div id="works" class="p-4 m-4 py-8 flex flex-col gap-10">
+  <p class="text-4xl font-bold">Works</p>
+  <div
+    class="flex flex-col gap-3
+              rounded-2xl p-6
+              bg-white/3 border border-white/8
+              shadow-[0_4px_32px_rgba(0,0,0,0.4)]"
+  >
+    <CompanyName
+      name="アルサーガパートナーズ株式会社"
+      join_date="2025/4/1"
+      terminate_data="現在"
+      url="https://www.arsaga.jp/"
+    />
+    <div class="flex flex-col mt-2">
+      <ProjectDetail
+        title="VBAを用いた業務改善ツール開発案件"
+        join_date="2026年1月 ~ 現在"
+        description="Excelマクロ・VBAを活用した業務フロー自動化ツールの設計・実装を担当。"
+      />
+      <ProjectDetail
+        title="結合テスト設計書作成"
+        join_date="2025年12月"
+        description="大手石油関連会社のシステム案件の結合テスト設計を担当。"
+      />
+      <ProjectDetail
+        title="Reactを用いた服飾業界向け販売管理Webアプリ開発案件"
+        join_date="2025年8月 ~ 2025年11月"
+        description="Reactを用いた服飾業界向け販売管理Webアプリの設計・実装を担当。"
+      />
+      <ProjectDetail
+        title="ReactとFastAPIを用いた自社SaaSアプリ改修"
+        join_date="2025年5月 ~ 現在"
+        description="ReactとFastAPIを用いた自社SaaSアプリの機能改修や保守を担当。"
+      />
+    </div>
+  </div>
+  <div
+    class="h-px bg-linear-to-r from-transparent via-red-900/40 to-transparent"
+  >
+  </div>
+  <div
+    class="flex flex-col gap-3
+              rounded-2xl p-6
+              bg-white/3 border border-white/8
+              shadow-[0_4px_32px_rgba(0,0,0,0.4)]"
+  >
+    <CompanyName
+      name="株式会社 正興電機製作所"
+      join_date="2018/4/1"
+      terminate_data="2025/3/31"
+      url="https://www.seiko-denki.co.jp/"
+    />
+    <div class="flex flex-col mt-2">
+      <ProjectDetail
+        title="電力業界向けの業務システム開発・運用"
+        join_date="2018年4月 ~ 2025年3月"
+        description="電力業界向けの業務システムの開発・運用・保守を担当。"
+      />
+      <ProjectDetail
+        title="社内における業務効率化ツールの開発"
+        join_date="2018年4月 ~ 2025年3月"
+        description="社内での業務効率化ツールの開発を担当。"
+      />
+    </div>
+  </div>
+</div>
